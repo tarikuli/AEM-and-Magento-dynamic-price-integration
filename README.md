@@ -1,6 +1,6 @@
 # High level architecture AEM 6.5 + Adobe Commerce Integration with CIF
 
-How to display **Configurable Product Data (dynamic pricing)** on the **Adobe Experience Manager (AEM) 6.5 Product Display Page (PDP)** using the **Commerce Integration Framework (CIF)** and **Adobe Commerce**.
+How to display **Product Data (dynamic pricing)** on the **Adobe Experience Manager (AEM) 6.5 Product Display Page (PDP)** using the **Commerce Integration Framework (CIF)** and **Adobe Commerce**.
 
 ---
 
@@ -11,7 +11,7 @@ How to display **Configurable Product Data (dynamic pricing)** on the **Adobe Ex
 - **CIF (Commerce Integration Framework)** enables seamless (headless) integration through GraphQL APIs.
 - **Adobe I/O Runtime** is used as an integration layer to synchronize and normalize data.
 
-This integration ensures that configurable product data (variants, dynamic prices, stock) is rendered dynamically in AEM while keeping commerce logic inside Adobe Commerce.
+This integration ensures that product data (variants, dynamic prices, stock) is rendered dynamically in AEM while keeping commerce logic inside Adobe Commerce.
 
 ---
 
@@ -52,7 +52,7 @@ The integration spans **four main domains**:
     - Dynamic product data is fetched from Adobe Commerce via GraphQL.
 
 3. **Commerce**
-   - GraphQL API retrieves configurable product data.
+   - GraphQL API retrieves product data.
    - Magento DB + Elasticsearch provide catalog, pricing, and search.
    - Configurable options (size, color, etc.) and variant SKUs are resolved.
 
@@ -60,7 +60,7 @@ The integration spans **four main domains**:
     - CIF Integration Layer in Adobe I/O Runtime synchronizes catalog data.
     - Middleware enables custom mappings and third-party integrations.
 
-### 🛠 Example GraphQL Query (Configurable Product)
+### 🛠 Example GraphQL Query (Product Data)
 ```
 query getConfigurableProduct($sku: String!) {
   products(filter: { sku: { eq: $sku } }) {
