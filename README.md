@@ -37,6 +37,7 @@ The integration spans **four main domains**:
 
 ### Flowchart
 ![Architecture flow chart](https://i.imgur.com/ae2sgnV.jpeg)
+![Architecture flow chart1](https://i.imgur.com/bG9CSgZ.png)
 
 
 ## ⚡ Data Flow
